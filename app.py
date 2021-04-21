@@ -13,6 +13,7 @@ import dash_html_components as html
 import dash_bootstrap_components as dbc
 
 app = dash.Dash(__name__,title = 'Addition',external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 FS_DATA = pd.read_csv('fsData.csv')
 FS_DATA["Sex"] = FS_DATA["Sex"].apply(lambda x: ["","M","F"][x])
